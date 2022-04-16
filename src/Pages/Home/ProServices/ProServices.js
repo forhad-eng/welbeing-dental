@@ -10,7 +10,7 @@ const ProServices = () => {
             <p className="text-blue-500">Take a look</p>
             <p className="text-3xl text-gray-700 font-[500] pb-2 tracking-wider">Our Premium Services</p>
 
-            <div className="grid md:grid-cols-4 gap-8 md:gap-8 my-2">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-10 md:px-0 my-2">
                 {services.slice(4, 8).map(proService => (
                     <ProService key={proService.id} proService={proService} />
                 ))}
