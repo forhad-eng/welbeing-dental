@@ -1,0 +1,30 @@
+[
+    {
+        "id": "0",
+        "name": "Teeth Cleaning",
+        "img": "https://i.ibb.co/7KFxGwy/brush.png",
+        "price": "2500",
+        "description": "Teeth cleaning is part of oral hygiene and involves the removal of dental plaque from teeth (dental caries)."
+    },
+    {
+        "id": "1",
+        "name": "Teeth Whitening",
+        "img": "https://i.ibb.co/VVm5zmL/tooth.png",
+        "price": "2699",
+        "description": "Whitening is among the most popular dental procedures because it can greatly improve how your teeth look."
+    },
+    {
+        "id": 2,
+        "name": "Modern Anesthetic",
+        "img": "https://i.ibb.co/N23kksf/Anesthetic.png",
+        "price": "4000",
+        "description": "Dental anesthesia is a field of anesthesia that includes not only local but sedation and general anesthesia."
+    },
+    {
+        "id": 3,
+        "name": "Quality Brackets",
+        "img": "https://i.ibb.co/T10zWs8/braces.png",
+        "price": "2899",
+        "description": "Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly."
+    }
+]
