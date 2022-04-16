@@ -20,8 +20,8 @@ const Header = () => {
             </div>
 
             <div
-                className={`md:flex items-center gap-2 md:gap-10 md:static absolute left-0 ease-in ${
-                    open ? 'top-16 flex flex-col bg-gray-300 w-full p-3' : '-top-[500px]'
+                className={`md:flex items-center gap-2 md:gap-10 md:static absolute left-0 transition-all  duration-75 ${
+                    open ? 'top-16 flex flex-col bg-gray-300 w-full p-3' : '-top-[800px]'
                 }`}
             >
                 <NavLink to="/" className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-gray-700')}>

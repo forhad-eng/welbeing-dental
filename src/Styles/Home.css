@@ -1,0 +1,20 @@
+.home-banner {
+    background: url('../images/banner2.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 76px);
+}
+
+@media only screen and (max-width: 576px) {
+    .home-banner {
+        background: url('../images/banner1.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: calc(100vh - 76px);
+    }
+    .home-banner img {
+        width: 300px;
+    }
+}
