@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import dentalPic from '../../images/dental-pic.png'
 import '../../Styles/Home.css'
+import ProServices from './ProServices/ProServices'
 import Services from './Services/Services'
 
 const Home = () => {
@@ -31,6 +32,8 @@ const Home = () => {
             </div>
 
             <Services />
+
+            <ProServices />
         </section>
     )
 }

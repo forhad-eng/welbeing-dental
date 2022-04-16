@@ -1,14 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../../../Styles/Service.css'
 
-const Service = ({ service }) => {
-    const { name, img, price, description } = service
+const ProService = ({ proService }) => {
+    const { name, img, price, description } = proService
 
     return (
-        <div className="service">
-            <img src={img} alt="" />
-            <div className="text-center text-gray-800 mt-6">
+        <div className="shadow-xl rounded p-3">
+            <img src={img} className="rounded hover:scale-105 hover:transition-all" alt="" />
+            <div className="text-gray-800 mt-6 pl-2">
                 <p className="font-[600] tracking-wider">{name}</p>
                 <p className="mb-3 font-[500] ">
                     Price: <span className="text-orange-500">${price}</span>
@@ -24,4 +23,4 @@ const Service = ({ service }) => {
     )
 }
 
-export default Service
+export default ProService
