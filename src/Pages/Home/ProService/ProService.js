@@ -7,9 +7,9 @@ const ProService = ({ proService }) => {
     return (
         <div className="shadow-xl rounded-lg">
             <img
-                style={{ height: '200px' }}
+                style={{ height: '200px', borderRadius: '0.5rem 0.5rem 0 0' }}
                 src={img}
-                className="w-full rounded hover:scale-95 hover:transition-all"
+                className="w-full hover:scale-95 hover:transition-all"
                 alt=""
             />
             <div className="text-gray-800 mt-6 pl-4">
