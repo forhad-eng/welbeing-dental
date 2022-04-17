@@ -1,0 +1,12 @@
+.about-me {
+    background-image: url('../images/about-me-banner.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 50px);
+}
+
+.connect img {
+    width: 30px;
+    height: 30px;
+}

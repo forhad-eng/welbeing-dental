@@ -8,7 +8,7 @@ import Blog from '../Blog/Blog'
 
 const Blogs = () => {
     return (
-        <div className="bg-gray-100 pt-10 pb-16">
+        <div className="bg-gray-100 pt-5 pb-16 md:pt-10">
             <p className="text-4xl italic font-[600] text-center my-3 pb-8">𝒲𝑒𝓁𝒸𝑜𝓂𝑒 𝓉𝑜 𝓂𝓎 𝒷𝓁𝑜𝑔</p>
 
             <section className="blog">

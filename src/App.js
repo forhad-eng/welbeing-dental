@@ -1,6 +1,7 @@
 import { Toaster } from 'react-hot-toast'
 import { Route, Routes } from 'react-router-dom'
 import CheckOut from './Pages/CheckOut/CheckOut'
+import About from './Pages/Home/About/About'
 import Blogs from './Pages/Home/Blogs/Blogs'
 import Home from './Pages/Home/Home'
 import ProServices from './Pages/Home/ProServices/ProServices'
@@ -27,6 +28,7 @@ function App() {
                     }
                 />
                 <Route path="/blogs" element={<Blogs />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route
