@@ -9,10 +9,15 @@ const Header = () => {
     return (
         <nav className="flex justify-between items-center px-4 md:px-16 py-5 relative">
             <div className="flex items-center gap-3">
-                <img src={logo} alt="" />
-                <p className="text-2xl md:text-3xl">
-                    <span className=" font-semibold text-gray-800">Wellbeing</span> Dental
-                </p>
+                <Link to="/">
+                    <img src={logo} alt="" />
+                </Link>
+
+                <Link to="/">
+                    <p className="text-2xl md:text-3xl">
+                        <span className=" font-semibold text-gray-800">Wellbeing</span> Dental
+                    </p>
+                </Link>
             </div>
 
             <div onClick={() => setOpen(!open)} className="md:hidden h-7 w-7">
@@ -24,7 +29,7 @@ const Header = () => {
                     open ? 'top-16 flex flex-col bg-gray-300 w-full p-3' : '-top-[800px]'
                 }`}
             >
-                <NavLink to="/" className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-gray-700')}>
+                <NavLink to="/services" className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-gray-700')}>
                     Services
                 </NavLink>
                 <NavLink to="/" className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-gray-700')}>

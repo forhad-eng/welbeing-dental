@@ -5,7 +5,7 @@ const ProService = ({ proService }) => {
     const { name, img, price, description } = proService
 
     return (
-        <div className="shadow-xl rounded">
+        <div className="shadow-xl rounded-lg">
             <img
                 style={{ height: '200px' }}
                 src={img}
@@ -20,7 +20,7 @@ const ProService = ({ proService }) => {
                 <p className="text-sm text-gray-500">{description}</p>
             </div>
             <Link to="/">
-                <button className="w-4/5 block mx-auto my-4 p-2 bg-blue-500 text-white rounded-xl outline-none">
+                <button className="w-4/5 block mx-auto my-4 p-2 bg-blue-500 text-white rounded-lg outline-none">
                     Book An Appointment
                 </button>
             </Link>
