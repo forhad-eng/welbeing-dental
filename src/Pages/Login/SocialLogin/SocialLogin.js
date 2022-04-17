@@ -11,17 +11,24 @@ const SocialLogin = () => {
     const [signInWithFacebook, facebookUser, , fError] = useSignInWithFacebook(auth)
     const navigate = useNavigate()
 
+    let errorElement
+    if (gError || fError) {
+        errorElement = (
+            <p className="text-red-700">
+                {gError?.message}
+                {fError?.message}
+            </p>
+        )
+    }
+
     if (googleUser || facebookUser) {
         toast.success('Success', { id: 'loginSuccess' })
         navigate('/')
     }
 
-    if (gError || fError) {
-        toast.error(`${gError?.message} ${fError?.message}`, { id: 'loginError' })
-    }
-
     return (
         <div className="px-10 md:px-20 my-2">
+            {errorElement}
             <button
                 onClick={() => signInWithGoogle()}
                 className="w-full flex items-center bg-white mb-2 p-1 border-2 border-gray-300 rounded-full outline-none"

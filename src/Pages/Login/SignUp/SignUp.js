@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { auth } from '../../../Firebase/firebase.init'
 import loginVector from '../../../images/login-vector.png'
 import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner'
+import SocialLogin from '../SocialLogin/SocialLogin'
 
 const SignUp = () => {
     const [agree, setAgree] = useState(false)
@@ -19,6 +20,7 @@ const SignUp = () => {
     const navigate = useNavigate()
 
     if (user) {
+        toast.success('Success', { id: 'userCreationSuccess' })
         navigate('/')
     }
 
@@ -60,7 +62,7 @@ const SignUp = () => {
         e.preventDefault()
 
         if (pass.value !== confirmPass.value) {
-            toast.error("Password didn't match")
+            toast.error("Password didn't match", { id: 'passNotMatch' })
             return
         }
 
@@ -74,7 +76,7 @@ const SignUp = () => {
                 <LoadingSpinner />
             ) : (
                 <div>
-                    <div className="lg:px-16 my-10">
+                    <div className="lg:px-16 mt-10 mb-2">
                         <div className="grid lg:grid-cols-2 gap-5 lg:gap-0">
                             <img src={loginVector} alt="" />
 
@@ -158,10 +160,16 @@ const SignUp = () => {
                         </div>
                     </div>
 
-                    <div className="w-3/4 md:w-1/3 mx-auto px-8 my-2 flex items-center">
-                        <hr style={{ height: '2px' }} className="w-1/2 bg-gray-300 mr-2" />
-                        <p>Or</p>
-                        <hr style={{ height: '2px' }} className="w-1/2 bg-gray-300 ml-2" />
+                    <div className="pl-1 lg:pr-36">
+                        <div className="px-8 flex justify-start md:justify-center lg:justify-end items-center">
+                            <hr style={{ height: '2px' }} className="w-32 md:w-44 bg-gray-300 mr-2" />
+                            <p>Or</p>
+                            <hr style={{ height: '2px' }} className="w-32 md:w-44 bg-gray-300 ml-2" />
+                        </div>
+
+                        <div className="flex justify-start md:justify-center lg:justify-end items-center">
+                            <SocialLogin />
+                        </div>
                     </div>
                 </div>
             )}

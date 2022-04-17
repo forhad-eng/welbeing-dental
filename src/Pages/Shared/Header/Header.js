@@ -2,6 +2,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/solid'
 import { signOut } from 'firebase/auth'
 import React, { useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
+import toast from 'react-hot-toast'
 import { Link, NavLink } from 'react-router-dom'
 import { auth } from '../../../Firebase/firebase.init'
 import logo from '../../../images/logo.png'
@@ -48,7 +49,7 @@ const Header = () => {
                     </NavLink>
                     {user ? (
                         <button
-                            onClick={() => signOut(auth)}
+                            onClick={() => signOut(auth).then(toast.success('Signed Out'))}
                             className="px-3 py-1 bg-blue-500 text-white rounded outline-none"
                         >
                             Sign out
