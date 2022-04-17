@@ -1,10 +1,14 @@
 import { MenuIcon, XIcon } from '@heroicons/react/solid'
+import { signOut } from 'firebase/auth'
 import React, { useState } from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link, NavLink } from 'react-router-dom'
+import { auth } from '../../../Firebase/firebase.init'
 import logo from '../../../images/logo.png'
 
 const Header = () => {
     const [open, setOpen] = useState(false)
+    const [user] = useAuthState(auth)
 
     return (
         <nav className="sticky top-0 bg-white">
@@ -42,9 +46,18 @@ const Header = () => {
                     <NavLink to="/about" className={({ isActive }) => (isActive ? 'text-blue-600' : 'text-gray-700')}>
                         About Us
                     </NavLink>
-                    <Link to="/login">
-                        <button className="px-3 py-1 bg-blue-500 text-white rounded outline-none">Login</button>
-                    </Link>
+                    {user ? (
+                        <button
+                            onClick={() => signOut(auth)}
+                            className="px-3 py-1 bg-blue-500 text-white rounded outline-none"
+                        >
+                            Sign out
+                        </button>
+                    ) : (
+                        <Link to="/login">
+                            <button className="px-3 py-1 bg-blue-500 text-white rounded outline-none">Login</button>
+                        </Link>
+                    )}
                 </div>
             </div>
         </nav>

@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast'
 import { Route, Routes } from 'react-router-dom'
 import CheckOut from './Pages/CheckOut/CheckOut'
 import Blogs from './Pages/Home/Blogs/Blogs'
@@ -37,6 +38,7 @@ function App() {
                     }
                 />
             </Routes>
+            <Toaster />
             <Footer />
         </div>
     )
