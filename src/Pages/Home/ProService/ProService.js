@@ -19,7 +19,7 @@ const ProService = ({ proService }) => {
                 </p>
                 <p className="text-sm text-gray-500">{description}</p>
             </div>
-            <Link to="/">
+            <Link to="/checkout">
                 <button className="w-4/5 block mx-auto my-4 p-2 bg-blue-500 text-white rounded-lg outline-none">
                     Book An Appointment
                 </button>

@@ -32,17 +32,17 @@ const Header = () => {
                 >
                     <NavLink
                         to="/services"
-                        className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-gray-700')}
+                        className={({ isActive }) => (isActive ? 'text-blue-600' : 'text-gray-700')}
                     >
                         Services
                     </NavLink>
-                    <NavLink to="/" className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-gray-700')}>
+                    <NavLink to="/blogs" className={({ isActive }) => (isActive ? 'text-blue-600' : 'text-gray-700')}>
                         Blogs
                     </NavLink>
-                    <NavLink to="/" className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-gray-700')}>
+                    <NavLink to="/about" className={({ isActive }) => (isActive ? 'text-blue-600' : 'text-gray-700')}>
                         About Us
                     </NavLink>
-                    <Link to="/">
+                    <Link to="/login">
                         <button className="px-3 py-1 bg-blue-500 text-white rounded outline-none">Login</button>
                     </Link>
                 </div>
