@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <p className="text-white">About Us</p>
+                    <p className="text-white">About Me</p>
                     <hr style={{ height: '1px' }} className="w-16 mt-1 mb-3" />
                     <ul>
                         <li>

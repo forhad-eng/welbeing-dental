@@ -12,7 +12,7 @@ const ProService = ({ proService }) => {
                 className="w-full hover:scale-95 hover:transition-all"
                 alt=""
             />
-            <div className="text-gray-800 mt-6 pl-4">
+            <div className="text-gray-800  p-4">
                 <p className="font-[600] tracking-wider">{name}</p>
                 <p className="mb-3 font-[500] ">
                     Price: <span className="text-orange-500">${price}</span>
@@ -20,7 +20,7 @@ const ProService = ({ proService }) => {
                 <p className="text-sm text-gray-500">{description}</p>
             </div>
             <Link to="/checkout">
-                <button className="w-4/5 block mx-auto my-4 p-2 bg-blue-500 text-white rounded-lg outline-none">
+                <button className="w-4/5 block mx-auto mb-4 p-2 bg-blue-500 text-white rounded-lg outline-none">
                     Book An Appointment
                 </button>
             </Link>

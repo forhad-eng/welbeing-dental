@@ -44,7 +44,7 @@ const Header = () => {
                         Blogs
                     </NavLink>
                     <NavLink to="/about" className={({ isActive }) => (isActive ? 'text-blue-600' : 'text-gray-700')}>
-                        About Us
+                        About Me
                     </NavLink>
                     {user ? (
                         <button
