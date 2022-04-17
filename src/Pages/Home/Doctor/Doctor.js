@@ -3,7 +3,7 @@ import doctor from '../../../images/doctor.png'
 
 const Doctor = () => {
     return (
-        <div className="grid md:grid-cols-2 gap-8 items-center my-10 px-6 md:px-10">
+        <div className="grid md:grid-cols-2 gap-8 items-center mb-10 md:mb-16 px-6 md:px-10">
             <div className="order-2 md:order-1">
                 <p className="text-3xl text-blue-500">Dr. Karen Dowson</p>
                 <p>

@@ -5,7 +5,7 @@ import logo from '../../../images/logo.png'
 
 const Footer = () => {
     return (
-        <footer className="mt-20 bg-[#444f5d] text-gray-300">
+        <footer className="bg-[#444f5d] text-gray-300">
             <div className="grid md:grid-cols-4 gap-10 md:gap-16 lg:gap-24 py-16 px-10">
                 <div>
                     <div className="flex items-center gap-2 text-white">
