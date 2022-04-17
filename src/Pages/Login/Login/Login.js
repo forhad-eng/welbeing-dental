@@ -9,7 +9,7 @@ const Login = () => {
                 <div className="grid lg:grid-cols-2 gap-5 lg:gap-0">
                     <form className="w-11/12 lg:w-10/12 mx-auto p-8 border-[1px] border-gray-300 rounded order-2 lg:order-1">
                         <p className="text-2xl font-bold">Welcome!</p>
-                        <p className="mb-5">Sign in by entering the information below</p>
+                        <p className="mb-5">Login by entering the information below</p>
                         <input
                             className="w-full border-2 rounded-lg mb-5 p-2 text-sm font-[500] outline-none"
                             type="text"
