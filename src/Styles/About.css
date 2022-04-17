@@ -10,3 +10,14 @@
     width: 30px;
     height: 30px;
 }
+
+.developer img {
+    width: 350px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 576px) {
+    .about-me {
+        height: calc(130vh);
+    }
+}

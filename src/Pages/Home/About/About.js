@@ -7,8 +7,8 @@ import '../../../Styles/About.css'
 
 const About = () => {
     return (
-        <div className="about-me grid grid-cols-2 gap-10 px-20">
-            <div className="mx-auto mt-24">
+        <div className="about-me grid md:grid-cols-2 md:gap-10 px-4 md:px-14 lg:px-20">
+            <div className="mx-auto mb-80 md:mb-0 md:mt-24 order-2 md:order-1">
                 <h2 className="text-4xl font-[600]">Hello, This is Forhad</h2>
                 <p>
                     <small>Junior Web Developer</small>
@@ -34,8 +34,9 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className="mx-auto">
-                <img width={'350'} src={developer} alt="" />
+
+            <div className="developer order-1 md:order-2">
+                <img src={developer} alt="" />
             </div>
         </div>
     )
