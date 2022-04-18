@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const ProService = ({ proService }) => {
-    const { name, img, price, description } = proService
+    const { name, img, price, description, id } = proService
 
     return (
         <div className="shadow-xl rounded-lg">
@@ -19,7 +19,7 @@ const ProService = ({ proService }) => {
                 </p>
                 <p className="text-sm text-gray-500">{description}</p>
             </div>
-            <Link to="/checkout">
+            <Link to={`/checkout/${id}`}>
                 <button className="w-4/5 block mx-auto mb-4 p-2 bg-blue-500 text-white rounded-lg outline-none">
                     Book An Appointment
                 </button>

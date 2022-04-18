@@ -1,9 +1,10 @@
 import { MenuIcon, XIcon } from '@heroicons/react/solid'
 import { signOut } from 'firebase/auth'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import toast from 'react-hot-toast'
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import { UrlParamContext } from '../../../App'
 import { auth } from '../../../Firebase/firebase.init'
 import logo from '../../../images/logo.png'
 
@@ -11,6 +12,8 @@ const Header = () => {
     const [open, setOpen] = useState(false)
     const [user] = useAuthState(auth)
     const location = useLocation()
+    const { param } = useContext(UrlParamContext)
+
     const path = location.pathname
     let displayStatus
 
@@ -21,7 +24,7 @@ const Header = () => {
         path === '/about' ||
         path === '/login' ||
         path === '/signup' ||
-        path === '/checkout'
+        path === `/checkout/${param}`
     ) {
         displayStatus = true
     } else {
@@ -30,7 +33,7 @@ const Header = () => {
 
     return (
         <nav className={`sticky top-0 bg-white z-10 ${displayStatus ? 'block' : 'hidden'}`}>
-            <div className="flex justify-between items-center px-4 md:px-10 lg:px-16 py-5 relative">
+            <div className="flex justify-between items-center px-4 md:px-6 lg:px-16 py-5 relative">
                 <div className="flex items-center gap-3">
                     <Link to="/">
                         <img src={logo} alt="" />

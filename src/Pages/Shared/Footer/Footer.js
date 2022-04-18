@@ -1,9 +1,11 @@
 import { HomeIcon, LocationMarkerIcon, PhoneIcon } from '@heroicons/react/solid'
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { UrlParamContext } from '../../../App'
 import logo from '../../../images/logo.png'
 
 const Footer = () => {
+    const { param } = useContext(UrlParamContext)
     const location = useLocation()
     const path = location.pathname
     let displayStatus
@@ -15,7 +17,7 @@ const Footer = () => {
         path === '/about' ||
         path === '/login' ||
         path === '/signup' ||
-        path === '/checkout'
+        path === `/checkout/${param}`
     ) {
         displayStatus = true
     } else {
