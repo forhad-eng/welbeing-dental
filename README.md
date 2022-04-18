@@ -1,6 +1,6 @@
 # Wellbeing Dental
 
-[Live Site](https://wellbeing-dental.web.app/)
+# [Live Site](https://wellbeing-dental.web.app/)
 
 ## Technology Used
 
