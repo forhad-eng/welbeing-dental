@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
         <nav className="sticky top-0 bg-white">
-            <div className="flex justify-between items-center px-4 md:px-16 py-5 relative">
+            <div className="flex justify-between items-center px-4 md:px-10 lg:px-16 py-5 relative">
                 <div className="flex items-center gap-3">
                     <Link to="/">
                         <img src={logo} alt="" />
