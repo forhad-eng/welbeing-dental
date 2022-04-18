@@ -13,7 +13,7 @@ const Services = () => {
             ) : (
                 <div className="px-4 md:px-10 lg:px-16">
                     <p className="text-3xl text-center text-gray-700 font-[500] my-10 pb-2 tracking-wider">
-                        Our Services
+                        Services
                         <hr style={{ height: '2px' }} className="block mx-auto w-24 bg-gray-400" />
                     </p>
 

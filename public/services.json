@@ -3,56 +3,56 @@
         "id": "0",
         "name": "Teeth Cleaning",
         "img": "https://i.ibb.co/7KFxGwy/brush.png",
-        "price": "2500",
+        "price": "250",
         "description": "Teeth cleaning is part of oral hygiene and involves the removal of dental plaque from teeth (dental caries)."
     },
     {
         "id": "1",
         "name": "Teeth Whitening",
         "img": "https://i.ibb.co/VVm5zmL/tooth.png",
-        "price": "2699",
+        "price": "269",
         "description": "Whitening is among the most popular dental procedures because it can greatly improve how your teeth look."
     },
     {
         "id": "2",
         "name": "Modern Anesthetic",
         "img": "https://i.ibb.co/N23kksf/Anesthetic.png",
-        "price": "4000",
+        "price": "600",
         "description": "Dental anesthesia is a field of anesthesia that includes not only local but sedation and general anesthesia."
     },
     {
         "id": "3",
         "name": "Quality Brackets",
         "img": "https://i.ibb.co/T10zWs8/braces.png",
-        "price": "2899",
+        "price": "400",
         "description": "Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly."
     },
     {
         "id": "4",
         "name": "Family Dental Care",
         "img": "https://i.ibb.co/JFFxnXt/premium1.jpg",
-        "price": "2500",
+        "price": "1500",
         "description": "Teeth cleaning is part of oral hygiene and involves the removal of dental plaque from teeth (dental caries)."
     },
     {
         "id": "5",
         "name": "Cleaning with Air Flow",
         "img": "https://i.ibb.co/303KZVb/premium2.jpg",
-        "price": "2699",
+        "price": "1599",
         "description": "Whitening is among the most popular dental procedures because it can greatly improve how your teeth look."
     },
     {
         "id": "6",
         "name": "Cosmetic Dentistry",
         "img": "https://i.ibb.co/n3Q00FZ/premium3.jpg",
-        "price": "4000",
+        "price": "1680",
         "description": "Dental anesthesia is a field of anesthesia that includes not only local but sedation and general anesthesia."
     },
     {
         "id": "7",
         "name": "Sedation Dentistry",
         "img": "https://i.ibb.co/yk8bTFR/premium4.jpg",
-        "price": "2899",
+        "price": "1489",
         "description": "Orthodontics is the branch of dentistry that corrects teeth and jaws that are positioned improperly."
     }
 ]

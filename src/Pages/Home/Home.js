@@ -21,9 +21,9 @@ const Home = () => {
                         <span className="font-bold tracking-wide">Wellbeing</span> Dental
                     </p>
                     <p className="text-sm mb-3 md:mb-7 md:leading-6">
-                        We have been providing services with reputation for 25 years! We give our max to the patient and
-                        do all the necessary stuffs to make patient happy. We believe in service first and it made us
-                        wellknown having satisfied the patient.
+                        Wellbeing Dental has been providing services with reputation for 25 years! We give our max to
+                        the patient and do all the necessary stuffs to make patient happy. We believe in service first
+                        and it made us wellknown having satisfied the patient.
                     </p>
                     <Link to="/blogs">
                         <button className="flex items-center ml-8 md:ml-0 mx-auto px-3 py-2 bg-blue-500 text-white rounded outline-none">
