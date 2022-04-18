@@ -1,34 +1,34 @@
 import React, { useContext } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
+import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { useNavigate, useParams } from 'react-router-dom'
 import { UrlParamContext } from '../../App'
 import { auth } from '../../Firebase/firebase.init'
 
 const CheckOut = () => {
+    const [user] = useAuthState(auth)
     const { serviceID } = useParams()
     const { setParam } = useContext(UrlParamContext)
-    const [user] = useAuthState(auth)
     setParam(serviceID)
 
     const navigate = useNavigate()
 
-    const checkoutHandler = e => {
-        const address = e.target.address.value
-        const phone = e.target.phone.value
+    const {
+        register,
+        handleSubmit,
+        formState: { errors }
+    } = useForm()
 
-        if (address && phone) {
-            toast.success(`Thanks For Booking, A representative of us will call you soon at ${phone}`)
-            navigate('/')
-        } else {
-            toast.error('Please fill out the information')
-        }
+    const onSubmit = data => {
+        toast.success(`Thanks For Booking, A representative of us will call you soon at ${data.phoneNumber}`)
+        navigate('/')
     }
 
     return (
         <div className="px-4 md:px-0">
             <form
-                onSubmit={checkoutHandler}
+                onSubmit={handleSubmit(onSubmit)}
                 className="md:w-1/2 lg:w-2/5 mx-auto my-16 p-8 border-[1px] border-gray-300 rounded"
             >
                 <p className="mb-5 text-2xl text-center font-[600]">Please Fill out the information below</p>
@@ -49,22 +49,24 @@ const CheckOut = () => {
                 />
 
                 <input
-                    className="w-full border-2 rounded-lg mb-5 p-2 text-sm font-[500] outline-none"
+                    {...register('address', { required: true })}
+                    className={`w-full border-2 rounded-lg p-2 text-sm font-[500] outline-none ${
+                        errors.address ? 'mb-0' : 'mb-5'
+                    }`}
                     type="text"
-                    name="address"
-                    id="address"
                     placeholder="Your Address"
-                    required
                 />
+                {errors.address && <span className="text-red-600">This field is required</span>}
 
                 <input
-                    className="w-full border-2 rounded-lg mb-5 p-2 text-sm font-[500] outline-none"
+                    {...register('phoneNumber', { required: true })}
+                    className={`w-full border-2 rounded-lg p-2 text-sm font-[500] outline-none ${
+                        errors.phoneNumber ? 'mb-0' : 'mb-5'
+                    }`}
                     type="text"
-                    name="phone"
-                    id="phone"
                     placeholder="Phone Number"
-                    required
                 />
+                {errors.phoneNumber && <span className="text-red-600">This field is required</span>}
 
                 <button type="submit" className="w-full bg-blue-500 text-white py-3 rounded-lg mt-2 mb-3 font-semibold">
                     Checkout
