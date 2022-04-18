@@ -9,14 +9,15 @@ const RequireAuth = ({ children }) => {
     const location = useLocation()
 
     if (loading) {
-        return <LoadingSpinner />
+        return <LoadingSpinner /> //while state is loading, LoadingSpinner will be rendered
     }
 
     if (!user) {
         return <Navigate to="/login" state={{ from: location }} replace />
+        // if user isn't logged in, then user will be transferred to Login page being updated the useLocation hook's state props.
     }
 
-    return children
+    return children //user logged in and get access to the private route
 }
 
 export default RequireAuth

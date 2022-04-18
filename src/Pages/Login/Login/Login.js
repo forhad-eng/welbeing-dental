@@ -18,18 +18,20 @@ const Login = () => {
     const from = location.state?.from?.pathname || '/'
 
     if (user) {
-        navigate(from, { replace: true })
+        navigate(from, { replace: true }) //if user found, then shifted user to redirected path or to HOME
     }
 
     if (sending) {
+        //invoke when user click on the password reset link
         toast.success(`Reset link will be sent upon user exist`, { id: 'emailSending' })
     }
 
     if (resetError) {
-        toast.error(`${resetError}`, { id: 'userNotFound' })
+        toast.error(`${resetError}`, { id: 'userNotFound' }) //invoke usually when user aren't in Database
     }
 
     const emailHandler = e => {
+        //Handle Email field on Blur
         if (/\S+@\S+\.\S+/.test(e.target.value)) {
             setEmail({ value: e.target.value, error: '' })
         } else if (e.target.value === '') {
@@ -40,6 +42,7 @@ const Login = () => {
     }
 
     const passHandler = e => {
+        //Handle Password field on Blur
         if (e.target.value.length < 6) {
             setPass({ value: '', error: 'Password require minimum 6 characters' })
         } else {
@@ -49,11 +52,11 @@ const Login = () => {
 
     const loginHandler = e => {
         e.preventDefault()
-
-        signInWithEmailAndPassword(email.value, pass.value)
+        signInWithEmailAndPassword(email.value, pass.value) //invoke if valid email and password
     }
 
     const passResetHandler = () => {
+        //invoke when user click on Forgot Password
         if (email.value) {
             sendPasswordResetEmail(email.value)
         } else if (email.error) {

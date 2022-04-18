@@ -20,11 +20,13 @@ const SignUp = () => {
     const navigate = useNavigate()
 
     if (user) {
+        //if user found then a success toast will be shown and user will be navigated to HOME page
         toast.success('Success', { id: 'userCreationSuccess' })
         navigate('/')
     }
 
     const nameHandler = e => {
+        //handle name field on Blur
         if (e.target.value === '') {
             setName({ value: '', error: "Name field can't be empty" })
         } else {
@@ -33,6 +35,7 @@ const SignUp = () => {
     }
 
     const emailHandler = e => {
+        //handle Email field on Blur
         if (/\S+@\S+\.\S+/.test(e.target.value)) {
             setEmail({ value: e.target.value, error: '' })
         } else if (e.target.value === '') {
@@ -43,6 +46,7 @@ const SignUp = () => {
     }
 
     const passHandler = e => {
+        //handle Password field on Blur
         if (e.target.value.length < 6) {
             setPass({ value: '', error: 'Password require minimum 6 characters' })
         } else {
@@ -51,6 +55,7 @@ const SignUp = () => {
     }
 
     const confirmPassHandler = e => {
+        //handle Confirm Password field on Blur
         if (e.target.value !== pass.value) {
             setConfirmPass({ value: '', error: "Password didn't match" })
         } else {
@@ -59,15 +64,16 @@ const SignUp = () => {
     }
 
     const signUpHandler = async e => {
-        e.preventDefault()
+        //invoke if user click on Sign up button
+        e.preventDefault() //use to prevent default behavior of form like reloading
 
         if (pass.value !== confirmPass.value) {
             toast.error("Password didn't match", { id: 'passNotMatch' })
             return
         }
 
-        await createUserWithEmailAndPassword(email.value, pass.value)
-        await updateProfile({ displayName: name.value })
+        await createUserWithEmailAndPassword(email.value, pass.value) //Create user if valid email and password
+        await updateProfile({ displayName: name.value }) //set user name
     }
 
     return (
