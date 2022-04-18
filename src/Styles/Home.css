@@ -6,15 +6,28 @@
     height: calc(100vh - 76px);
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 375px) {
     .home-banner {
         background: url('../images/banner1.svg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: calc(100vh - 76px);
+        height: 140vh;
     }
     .home-banner img {
-        width: 300px;
+        width: 270px;
+    }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 576px) {
+    .home-banner {
+        background: url('../images/banner1.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 110vh;
+    }
+    .home-banner img {
+        width: 270px;
     }
 }
