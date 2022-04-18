@@ -3,16 +3,33 @@ import { signOut } from 'firebase/auth'
 import React, { useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import toast from 'react-hot-toast'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { auth } from '../../../Firebase/firebase.init'
 import logo from '../../../images/logo.png'
 
 const Header = () => {
     const [open, setOpen] = useState(false)
     const [user] = useAuthState(auth)
+    const location = useLocation()
+    const path = location.pathname
+    let displayStatus
+
+    if (
+        path === '/' ||
+        path === '/services' ||
+        path === '/blogs' ||
+        path === '/about' ||
+        path === '/login' ||
+        path === '/signup' ||
+        path === '/checkout'
+    ) {
+        displayStatus = true
+    } else {
+        displayStatus = false
+    }
 
     return (
-        <nav className="sticky top-0 bg-white">
+        <nav className={`sticky top-0 bg-white z-10 ${displayStatus ? 'block' : 'hidden'}`}>
             <div className="flex justify-between items-center px-4 md:px-10 lg:px-16 py-5 relative">
                 <div className="flex items-center gap-3">
                     <Link to="/">

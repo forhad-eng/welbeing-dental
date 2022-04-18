@@ -1,11 +1,29 @@
 import { HomeIcon, LocationMarkerIcon, PhoneIcon } from '@heroicons/react/solid'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../../../images/logo.png'
 
 const Footer = () => {
+    const location = useLocation()
+    const path = location.pathname
+    let displayStatus
+
+    if (
+        path === '/' ||
+        path === '/services' ||
+        path === '/blogs' ||
+        path === '/about' ||
+        path === '/login' ||
+        path === '/signup' ||
+        path === '/checkout'
+    ) {
+        displayStatus = true
+    } else {
+        displayStatus = false
+    }
+
     return (
-        <footer className="bg-[#444f5d] text-gray-300">
+        <footer className={`bg-[#444f5d] text-gray-300 ${displayStatus ? 'block' : 'hidden'}`}>
             <div className="grid md:grid-cols-4 gap-10 md:gap-16 lg:gap-24 py-16 px-10">
                 <div>
                     <div className="flex items-center gap-2 text-white">

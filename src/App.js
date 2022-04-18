@@ -9,6 +9,7 @@ import Services from './Pages/Home/Services/Services'
 import Login from './Pages/Login/Login/Login'
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth'
 import SignUp from './Pages/Login/SignUp/SignUp'
+import NotFound from './Pages/NotFound/NotFound'
 import Footer from './Pages/Shared/Footer/Footer'
 import Header from './Pages/Shared/Header/Header'
 
@@ -39,6 +40,7 @@ function App() {
                         </RequireAuth>
                     }
                 />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Toaster />
             <Footer />
