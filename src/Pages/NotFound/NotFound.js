@@ -5,8 +5,15 @@ import '../../Styles/NotFount.css'
 const NotFound = () => {
     return (
         <div className="not-found">
-            <div className='space-x'>
-                <svg width="1123" height="837" viewBox="0 0 1123 837" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="space-x">
+                <svg
+                    className="falcon-heavy"
+                    width="1123"
+                    height="837"
+                    viewBox="0 0 1123 837"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
                     <rect width="1123" height="837" fill="black" />
                     <g id="sky" filter="url(#filter0_d)">
                         <rect id="background" x="30" y="26" width="1063" height="777" rx="20" fill="black" />
@@ -287,7 +294,7 @@ const NotFound = () => {
                     </defs>
                 </svg>
             </div>
-            
+
             <div class="text">
                 <h1 className="title">404 Error</h1>
                 <h2>Couldn't launch :(</h2>

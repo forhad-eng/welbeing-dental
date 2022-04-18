@@ -115,7 +115,7 @@ const Login = () => {
                         </div>
                     </div>
 
-                    <div className="pl-1 lg:pl-36">
+                    <div className="pl-1 lg:pl-36 mb-16">
                         <div className="px-8 flex justify-start md:justify-center lg:justify-start items-center">
                             <hr style={{ height: '2px' }} className="w-32 md:w-44 bg-gray-300 mr-2" />
                             <p>Or</p>
