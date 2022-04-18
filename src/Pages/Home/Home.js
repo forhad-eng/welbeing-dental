@@ -15,7 +15,7 @@ const Home = () => {
                     <img width={'530'} src={dentalPic} alt="" />
                 </div>
 
-                <div className="mt-6 md:mt-24 ml-44 md:ml-20 lg:ml-40 pr-2 order-1 md:order-2">
+                <div className="mt-6 md:mt-16 lg:mt-28 ml-44 md:ml-20 lg:ml-40 pr-2 order-1 md:order-2">
                     <p className="text-2xl uppercase mb-2">Welcome to</p>
                     <p className="text-2xl md:text-5xl mb-2 md:mb-7">
                         <span className="font-bold tracking-wide">Wellbeing</span> Dental
@@ -25,7 +25,7 @@ const Home = () => {
                         do all the necessary stuffs to make patient happy. We believe in service first and it made us
                         wellknown having satisfied the patient.
                     </p>
-                    <Link to="/">
+                    <Link to="/blogs">
                         <button className="flex items-center ml-8 md:ml-0 mx-auto px-3 py-2 bg-blue-500 text-white rounded outline-none">
                             See More <ChevronRightIcon className="w-5 h-5" />
                         </button>

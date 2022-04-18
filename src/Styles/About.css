@@ -16,8 +16,22 @@
     margin: 0 auto;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 380px) {
     .about-me {
-        height: calc(130vh);
+        height: calc(190vh);
+        background-position: inherit;
+    }
+}
+@media only screen and (min-width: 381px) and (max-width: 576px) {
+    .about-me {
+        height: calc(135vh);
+        background-position: inherit;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 820px) {
+    .about-me {
+        height: calc(100vh - 200px);
+        background-position: inherit;
     }
 }
