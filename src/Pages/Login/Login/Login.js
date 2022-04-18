@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import toast from 'react-hot-toast'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { auth } from '../../../Firebase/firebase.init'
 import loginVector from '../../../images/login-vector.png'
@@ -10,6 +11,7 @@ const Login = () => {
     const [email, setEmail] = useState({ value: '', error: '' })
     const [pass, setPass] = useState({ value: '', error: '' })
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth)
+    const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(auth)
     const location = useLocation()
     const navigate = useNavigate()
 
@@ -17,6 +19,14 @@ const Login = () => {
 
     if (user) {
         navigate(from, { replace: true })
+    }
+
+    if (sending) {
+        toast.success(`Reset link will be sent upon user exist`, { id: 'emailSending' })
+    }
+
+    if (resetError) {
+        toast.error(`${resetError}`, { id: 'userNotFound' })
     }
 
     const emailHandler = e => {
@@ -41,6 +51,16 @@ const Login = () => {
         e.preventDefault()
 
         signInWithEmailAndPassword(email.value, pass.value)
+    }
+
+    const passResetHandler = () => {
+        if (email.value) {
+            sendPasswordResetEmail(email.value)
+        } else if (email.error) {
+            toast.error(`${email.error}`, { id: 'invalidEmailErr' })
+        } else {
+            toast.error(`Please enter your email`, { id: 'enterEmailToReset' })
+        }
     }
 
     return (
@@ -90,9 +110,9 @@ const Login = () => {
                                             Remember me?
                                         </label>
                                     </div>
-                                    <Link to="/" className="text-blue-600 underline">
+                                    <span onClick={passResetHandler} className="text-blue-600 underline cursor-pointer">
                                         Forgot password?
-                                    </Link>
+                                    </span>
                                 </div>
 
                                 {error && <p className="text-red-700">{error.message}</p>}
